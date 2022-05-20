@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="100dp"
+        android:id="@+id/logo_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:src="@drawable/logo_trans_background"
+        android:transitionName="logo_image"></ImageView>
+
+    <TextView
+        android:id="@+id/logo_title"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Bienvenue à  HelpDesk Appli!"
+        android:textSize="20sp"
+        android:transitionName="logo_title"></TextView>
+    <TextView
+        android:id="@+id/logo_soustitle"
+        android:transitionName="logo_soustitle"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Votre appli de gestion tickets"
+        android:textSize="18sp"
+        android:fontFamily="@font/antic"></TextView>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:layout_height="wrap_content"
+            android:hint="Nom d'utilisateur"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionNext"
+                android:singleLine="true"></com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:layout_height="wrap_content"
+            android:hint="mot de passe"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:id="@+id/passtxt"></com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <Button
+            android:id="@+id/validerbtn"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:backgroundTint="#03a7e9"
+            android:text="Login"
+            android:textColor="#fff"></Button>
+        <TextView
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_link"
+            android:text="Click here to register"
+            android:textColor="#03a7e9"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

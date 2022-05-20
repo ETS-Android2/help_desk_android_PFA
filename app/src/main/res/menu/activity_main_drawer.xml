@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_users_list"
+            android:icon="@drawable/ic_users"
+            android:title="Liste des utilisateurs" />
+        <item
+            android:id="@+id/nav_tickets_list"
+            android:icon="@drawable/ic_ticket"
+            android:title="Liste des tickets" />
+        <item
+            android:id="@+id/nav_projects_list"
+            android:icon="@drawable/ic_project"
+            android:title="Liste des projets" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_stats"
+            android:title="Statistics" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_login_24"
+            android:title="Logout" />
+</menu>

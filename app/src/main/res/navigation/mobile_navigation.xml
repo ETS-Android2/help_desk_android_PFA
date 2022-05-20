@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_tickets_list">
+
+    <fragment
+        android:id="@+id/nav_tickets_list"
+        android:name="com.example.myapplication.ui.fragments.ticket.TicketsListFragment"
+        android:label="@string/menu_tickets_list"
+        tools:layout="@layout/fragment_tickets_list" >
+        <action
+            android:id="@+id/action_add_ticket"
+            app:destination="@id/add_edit_ticket" />
+        <action
+            android:id="@+id/action_edit_ticket"
+            app:destination="@id/add_edit_ticket" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_edit_ticket"
+        android:name="com.example.myapplication.ui.fragments.ticket.AddEditTicketFragment"
+        android:label="@string/menu_edit_ticket"
+        tools:layout="@layout/add_edit_ticket_frag">
+        <action android:id="@+id/action_add_project_for_ticket"
+            app:destination="@+id/add_edit_project"/>
+        <action android:id="@+id/action_edit_project_for_ticket"
+            app:destination="@+id/add_edit_project"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_projects_list"
+        android:name="com.example.myapplication.ui.fragments.project.ProjectsListFragment"
+        android:label="@string/menu_projects_list"
+        tools:layout="@layout/fragment_projects_list" >
+        <action
+            android:id="@+id/action_add_project"
+            app:destination="@id/add_edit_project" />
+        <action
+            android:id="@+id/action_edit_project"
+            app:destination="@id/add_edit_project" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_edit_project"
+        android:name="com.example.myapplication.ui.fragments.project.AddEditProjectFragment"
+        android:label="@string/menu_edit_project"
+        tools:layout="@layout/add_edit_project_frag">
+        <action
+            android:id="@+id/action_add_task_to_project"
+            app:destination="@+id/add_edit_task"/>
+        <action
+            android:id="@+id/action_view_project_tasks"
+            app:destination="@+id/tasks_list"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_users_list"
+        android:name="com.example.myapplication.ui.fragments.user.UsersListFragment"
+        android:label="@string/menu_users_list"
+        tools:layout="@layout/fragment_users_list" >
+        <action
+            android:id="@+id/action_add_user"
+            app:destination="@id/add_edit_user" />
+        <action
+            android:id="@+id/action_edit_user"
+            app:destination="@id/add_edit_user" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_edit_task"
+        android:name="com.example.myapplication.ui.fragments.task.AddEditTaskFragment"
+        android:label="@string/menu_edit_task"
+        tools:layout="@layout/add_edit_task_frag"/>
+    <fragment
+        android:id="@+id/tasks_list"
+        android:name="com.example.myapplication.ui.fragments.task.TasksListFragment"
+        android:label="@string/menu_manage_tasks"
+        tools:layout="@layout/fragment_tasks_list">
+        <action
+            android:id="@+id/action_add_task_to_project"
+            app:destination="@id/add_edit_task" />
+        <action
+            android:id="@+id/action_edit_task"
+            app:destination="@id/add_edit_task" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_edit_user"
+        android:name="com.example.myapplication.ui.fragments.user.AddEditUserFragment"
+        android:label="@string/menu_edit_user"
+        tools:layout="@layout/add_edit_user_frag"/>
+    <activity
+        android:id="@+id/nav_logout"
+        android:name="com.example.myapplication.ui.LoginActivity"
+        android:label="Logout"
+        tools:layout="@layout/activity_login_screen"
+        />
+    <fragment
+        android:id="@+id/nav_statistics"
+        android:name="com.example.myapplication.ui.fragments.stats.StatsFragment"
+        tools:layout="@layout/fragment_stats"
+        android:label="@string/stats_title"
+        />
+  <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.myapplication.ui.fragments.user.ProfileFragment"
+        tools:layout="@layout/user_profile_frag"
+        android:label="@string/profile_title"
+        />
+
+
+</navigation>
